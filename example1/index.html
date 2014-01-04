@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Analytics example</title>
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<!--Analytics-->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/black-tie/jquery-ui.css">
+<script>
+//Vul hieronder het gewenste account, web property en profiel in. (zie handleiding) 
+//Laat leeg indien u niet weet wat het is of u maar 1 website hebt met analytics
+var firstAccountId = 3445744; //formaat: xxxxxxxxxx - verplicht
+var firstWebpropertyId = 'UA-3445744-1'; //formaat: 'UA-xxxxxxxxx-x' - verplicht
+var firstProfileId = 6738748; //formaat: xxxxxxxxxx - verplicht
+var clientId = '985227555401'; //zie handleiding - verplicht
+var apiKey = 'AIzaSyBBqRusMkaURnazGxsx5R_kl70YC3jCDVY'; //zie handleiding - verplicht
+var viewTotals = true;
+</script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="analytics_api_auth.js"></script> 
+<script src="analytics_api.js"></script> 
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+<script src="https://www.google.com/jsapi"></script>
+<script>
+google.load("visualization", "1", {packages:['corechart', 'table']});
+</script>
+<!--End Analytics-->
+
+</head>
+<body>
+
+<div id="templatemo_wrapper">
+	<div id="templatemo_top">
+        <div id="templatemo_search">
+            <form action="#" method="get">
+              <input type="text" value="Enter a keyword" name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+              <input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
+            </form>
+        </div>
+	</div>
+	<div id="templatemo_header">
+    	<div id="site_title"><a href="#" rel="nofollow" target="_parent">Blue Tech Template</a></div>
+        <div id="templatemo_menu">
+            <ul>
+                <li><a href="#" class="selected home">Home</a></li>
+                <li><a href="#" class="services">Services</a></li>
+                <li><a href="#" class="gallery">Galllery</a></li>
+                <li><a href="#" class="news">News</a></li>
+                <li class="last"><a href="contact.html" class=" contact">Contact</a></li>
+            </ul>
+        </div> <!-- end of templatemo_menu -->
+        <div><a href="#" title="HD Images" class="top"  target="_blank"><img src="images/top.png" alt="HD Images" title="HD Images" /></a></div>
+    </div> <!-- END of header -->
+    <div id="templatemo_slider">
+    	<div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="images/slider/01.png" alt="Mouse 1" title="#caption1" />
+            </div>
+            <div id="caption1" class="nivo-html-caption">
+            	<h1>Lorem ipsum dolor sit amet adipiscing elit. </h1>
+                <p>Nulla egestas turpis ac lectus dapibus adipiscing. Nulla laoreet nisi vitae libero pellentesque aliquam.</p>
+            </div>
+			<a href="#" class="slider_detail">Detail</a>
+        </div>
+    </div> <!-- END of slider -->
+    <div id="templatemo_middle">
+    	<div class="col_3">
+        	<h2><a href="#">Etiam At Dolor Nibh</a></h2>
+            <img src="images/icon_01.png" alt="Icon 1" class="img_fl" />
+            <p>Nam pulvinar magna at lectus lacinia venenatis. Suspendisse in metus at metus molestie ullamcorper id vitae erat.</p>
+        </div>
+        <div class="col_3">
+        	<h2><a href="#">Curabitur Et Nisl Lacus</a></h2>
+            <img src="images/icon_02.png" alt="Icon 2" class="img_fl" />            
+            <p>Vivamus tincidunt lorem sit amet ipsum aliquet vel nunc viverra ut accumsan velit egestas. Nullam et diam dolor.</p>
+        </div>
+        <div class="col_3 no_margin_right no_padding_right">
+        	<h2><a href="#">Fusce Eu Nunc Ipsum</a></h2>
+            <img src="images/icon_03.png" alt="Icon 3" class="img_fl" />            
+            <p>Nam odio nulla, posuere sit amet aliquam porttitor, tempus ac orci potenti maecenas id iaculis ipsum.</p>
+        </div>
+    </div> <!-- END of middle -->
+    <div id="templatemo_main">
+    	<div class="content_wrapper">
+            <div class="col_2">
+                <div id="chartBrowser_div" style="width:420px; height:330px;"></div>
+            </div>
+            <div class="col_2 no_margin_right">
+
+                    <h2>News</h2>
+                    <div class="news_list">
+                        <img src="images/templatemo_image_01.png" alt="News 1"  class="img_fl img_border img_border_s" />
+                        <div class="date">26 October 2072</div>
+                        <a href="#">Cras mi lectus tempus vitae</a>
+                        <p>Proin vitae suscipit nisl. Mauris tempor felis id dolor volutpat facilisis. Morbi hendrerit massa et neque facilisis iaculis.</p>
+                        <div class="clear"></div>
+					</div>           
+                    <div class="news_list">
+                        <img src="images/templatemo_image_02.png" alt="News 2" class="img_fl img_border img_border_s" />
+                        <div class="date">29 October 2072</div>
+                        <a href="#">Morbi eget neque lectus</a>
+                        <p>Sed feugiat at lacus vitae fringilla. In congue arcu a dui ullamcorper sit amet tristique massa.</p>
+                        <div class="clear"></div>
+					</div>  
+                    <a href="#" class="more">More</a>         
+            </div>	
+        </div>
+    </div>
+</div> <!-- END of templatemo_wrapper -->
+
+<div id="templatemo_footer_wrapper">
+	<div id="templatemo_footer">
+    	<div class="col_4">
+        	<h4>Pages</h4>
+            <ul class="nobullet bottom_list">
+            	<li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="col_4">
+        	<h4>Our Partners</h4>
+            <ul class="nobullet bottom_list">
+            	<li><a href="#" target="_parent">Nullam hendrerit</a></li>
+                <li><a href="#" rel="nofollow" target="_parent">Free Flash Stuffs</a></li>
+                <li><a href="#" rel="nofollow" target="_parent">Flash Websites</a></li>  
+                <li><a href="#" rel="nofollow" target="_parent">Free CSS Templates</a></li>
+                <li><a href="#" target="_parent">Etiam sollicitudin</a></li>
+            </ul>
+        </div>
+        
+         <div class="col_4">
+        	<h4>Links</h4>
+            <ul class="nobullet bottom_list">
+            	<li><a href="#">Mauris tempor felis</a></li>
+                <li><a href="#">Nulla blandit aliquet</a></li>
+                <li><a href="#">Aliquam tempor</a></li>
+                <li><a href="#">Mauris suscipit dui</a></li>
+                <li><a href="#">Etiam quis nibh</a></li>
+            </ul>
+        </div>
+        <div class="col_4 no_margin_right">
+        	<h4>Statistics</h4>
+            <div id="table_div"></div>
+        </div>
+        <div class="clear"></div>
+        <div id="templatemo_copyright">
+			Copyright © 2072 Your Company Name | <a href="#" rel="nofollow" target="_parent">Blue Tech</a> by <a href="#" rel="nofollow" target="_parent">templatemo</a>
+		</div>
+    </div> <!-- END of templatemo_footer -->
+</div> <!-- END of templatemo_footer_wrapper -->
+
+</body>
+</html>

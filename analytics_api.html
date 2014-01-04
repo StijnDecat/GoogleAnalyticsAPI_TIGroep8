@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Analytics API voorbeeld</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/black-tie/jquery-ui.css">
+<script>
+//Vul hieronder het gewenste account, web property en profiel in. (zie handleiding) 
+//Laat leeg indien u niet weet wat het is of u maar 1 website hebt met analytics
+var firstAccountId = 44012429; //formaat: xxxxxxxxxx - verplicht
+var firstWebpropertyId = 'UA-44012429-1'; //formaat: 'UA-xxxxxxxxx-x' - verplicht
+var firstProfileId = 76617843; //formaat: xxxxxxxxxx - verplicht
+var clientId = '1094354988254-n97tes7viicpmb8jkulhijpk6gm2s6ic.apps.googleusercontent.com'; //zie handleiding - verplicht
+var apiKey = 'AIzaSyDXe1cWSI0jNd5V-R62DJFr2H2WK-PPmvQ'; //zie handleiding - verplicht
+var viewTotals = false;
+</script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="analytics_api_auth.js"></script> 
+<script src="analytics_api.js"></script> 
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+<script src="https://www.google.com/jsapi"></script>
+<script>
+google.load("visualization", "1", {packages:['corechart', 'table']});
+</script>
+</head>
+<body>
+<div id="chart_div" style="width: 500px; height: 400px;"></div>
+<div id="chartBrowser_div" style="width: 500px; height: 400px;"></div>
+<div id="table_div" style="width: 500px; height:250px;"></div>
+
+</body>
+</html>
