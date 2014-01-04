@@ -81,6 +81,8 @@ Bij *Authorized Javascript Origins* vult u alle adressen in waarvan een mogelijk
 
 Wanneer de applicatie lokaal draait in een wamp omgeving dient het eerste *http://localhost* te zijn en bij *Authorized redirect URI* dient u *http://localhost/oauth2callback* in te voeren.
 
+Anders dient u localhost host te veranderen in uw eigen domein.
+
 In deze velden kunnen telkens meerdere webadressen voorkomen.
 
 Daarnaast dient men ook een public API access key te maken. 
